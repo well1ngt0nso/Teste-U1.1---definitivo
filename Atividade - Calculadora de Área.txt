@@ -1,0 +1,38 @@
+/*
+ NOME:            CALCULADORA DE ÁREA
+VERSÃO:                  1.0
+DESCRIÇÃO:       Área de triângulos a partir da coordenada dos vertices 
+DATA DA CRIAÇÃO:           15/09/2022
+ESCRITO POR:              Wellington S. O.
+E-MAIL:           wellington.oliveira.708@ufrn.edu.br
+DISTRO:           Windows 10
+LICENÇA:                *****
+PROJETO:    https://github.com/Well2002/Teste-U1.1---definitivo.git
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  //Variáveis de coordenadas e da área, respectivamente:
+  float x1, y1, x2, y2, x3, y3, At;
+  //Variáveis de coordenadas e da área, respectivamente:
+  char unidade[2];
+  printf("Digite a escala/unidade do sistema de medida, por exemplo: m, mm, cm... \n");
+ scanf("%s", unidade);
+  //Leitura das coordenadas:
+  printf("Digite as coordenadas do ponto P1, respectivamente: X1 e Y1 \n");
+ scanf("%f", &x1);
+ scanf("%f", &y1);
+  printf("Digite as coordenadas do ponto P1, respectivamente: X2 e Y2 \n");
+ scanf("%f", &x2);
+ scanf("%f", &y2);
+  printf("Digite as coordenadas do ponto P1, respectivamente: X3 e Y3 \n");
+  scanf("%f", &x3);
+  scanf("%f", &y3);
+  //Cálculo da área:
+At = (0.5)* (x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2));
+  //Valor final (módeulo):
+  printf("O valor da área é: %f %s²", fabs(At), unidade);
+  return 0;
+}
